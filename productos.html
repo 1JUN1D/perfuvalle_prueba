@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Frascos para Perfumes | Perfuvalle</title>
+    <meta name="description" content="Explora nuestro catálogo completo de frascos y envases para perfumes al por mayor. Envíos a todo Colombia.">
+    <meta name="keywords" content="frascos para perfumes, envases perfumería, botellas perfumes mayoreo, catálogo perfumería, Perfuvalle">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e8b4d;
+            --secondary-color: #4CAF50;
+            --accent-color: #8BC34A;
+            --light-color: #e8f5e9;
+            --dark-color: #1b5e20;
+            --gray-color: #f5f5f5;
+            --text-color: #333;
+            --white-color: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-tagline {
+            font-size: 0.9rem;
+            display: block;
+            font-weight: 300;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-nav li {
+            position: relative;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .main-nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--white-color);
+            transition: var(--transition);
+        }
+
+        .main-nav a:hover:after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-form {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            border: none;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white-color);
+            transition: var(--transition);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 250px;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            color: var(--white-color);
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-btn {
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* Page Header */
+        .page-header {
+            background-color: var(--light-color);
+            padding: 60px 0;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .page-description {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            margin-bottom: 40px;
+        }
+
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            background-color: var(--white-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .filter-select {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            min-width: 150px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .filter-search {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .filter-search-input {
+            width: 100%;
+            padding: 10px 15px;
+            padding-right: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .filter-search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .filter-search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        .filter-btn i {
+            font-size: 0.9rem;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.8em;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .product-capacity {
+            color: #666;
+        }
+
+        .product-price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-btn {
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .product-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        .product-btn i {
+            font-size: 0.8rem;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 60px;
+        }
+
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white-color);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .pagination-btn.active,
+        .pagination-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-color: var(--primary-color);
+        }
+
+        .pagination-btn.prev,
+        .pagination-btn.next {
+            width: auto;
+            padding: 0 15px;
+        }
+
+        /* No products found */
+        .no-products {
+            text-align: center;
+            padding: 50px 0;
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .no-products-icon {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .no-products-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .no-products-text {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .no-products-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 5px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .no-products-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--white-color);
+            position: relative;
+        }
+
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-color);
+        }
+
+        .footer-newsletter p {
+            margin-bottom: 15px;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .newsletter-input {
+            padding: 10px 15px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white-color);
+            flex-grow: 1;
+            border-radius: 30px 0 0 30px;
+            font-family: inherit;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+        }
+
+        .newsletter-btn {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 100px;
+            z-index: 999;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 20px;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+            }
+
+            .search-form {
+                display: none;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-search {
+                width: 100%;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                right: 30px;
+                bottom: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <img src="../imagenes/logo-perfuvalle.png" alt="Perfuvalle Logo">
+            </div>
+            
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../productos.html">Catálogo</a></li>
+                    <li><a href="../index.html#about">Nosotros</a></li>
+                    <li><a href="../index.html#testimonials">Clientes</a></li>
+                    <li><a href="../index.html#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Buscar frascos...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
+                <a href="../index.html#contact" class="contact-btn">
+                    <i class="fas fa-phone-alt"></i>
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Catálogo de Frascos y Envases</h1>
+            <p class="page-description">Explora nuestra amplia variedad de frascos para perfumes, lociones y colonias. Precios especiales para mayoristas.</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label class="filter-label">Categoría</label>
+                    <select class="filter-select" id="category-filter">
+                        <option value="all">Todas las categorías</option>
+                        <option value="30ml">Frascos 30ml</option>
+                        <option value="50ml">Frascos 50ml</option>
+                        <option value="100ml">Frascos 100ml</option>
+                        <option value="especiales">Diseños Especiales</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Ordenar por</label>
+                    <select class="filter-select" id="sort-filter">
+                        <option value="name-asc">Nombre (A-Z)</option>
+                        <option value="name-desc">Nombre (Z-A)</option>
+                        <option value="price-asc">Precio (Menor a Mayor)</option>
+                        <option value="price-desc">Precio (Mayor a Menor)</option>
+                        <option value="popularity">Popularidad</option>
+                    </select>
+                </div>
+                
+                <div class="filter-search">
+                    <input type="text" class="filter-search-input" id="search-filter" placeholder="Buscar por nombre o referencia...">
+                    <button class="filter-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <button class="filter-btn" id="apply-filters">
+                    <i class="fas fa-filter"></i>
+                    Aplicar Filtros
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="product-grid" id="product-grid">
+                <div class="product-card" data-id="1" data-category="alcohol">
+    <a href="../producto.html?id=1">
+        <div class="product-img">
+            <img src="../imagenes/alcohol-perfumeria-perfuvalle.png" alt="Alcohol Con Fijador 1L">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Alcohol Con Fijador 1L</h3>
+            <div class="product-meta">
+                <span class="product-capacity">1 L</span>
+                <span class="product-price">$10.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="2" data-category="packaging">
+    <a href="../producto.html?id=2">
+        <div class="product-img">
+            <img src="../imagenes/bolsas-perfumeria-grandes-perfuvalle.png" alt="Bolsas Grandes 100ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Bolsas Grandes 100ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">100 ml</span>
+                <span class="product-price">$450</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="3" data-category="packaging">
+    <a href="../producto.html?id=3">
+        <div class="product-img">
+            <img src="../imagenes/bolsas-perfumeria-single-perfuvalle.png" alt="Bolsas Single 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Bolsas Single 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$400</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="4" data-category="packaging">
+    <a href="../producto.html?id=4">
+        <div class="product-img">
+            <img src="../imagenes/caja-medera-oso-perfumeria--perfuvalle.png" alt="Caja Madera Moschino">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Caja Madera Moschino</h3>
+            <div class="product-meta">
+                <span class="product-capacity">packaging</span>
+                <span class="product-price">$5.800</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="5" data-category="packaging">
+    <a href="../producto.html?id=5">
+        <div class="product-img">
+            <img src="../imagenes/caja-medera-perfumeria-tacon-perfuvalle.png" alt="Caja Madera Good Girl">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Caja Madera Good Girl</h3>
+            <div class="product-meta">
+                <span class="product-capacity">packaging</span>
+                <span class="product-price">$5.800</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="6" data-category="packaging">
+    <a href="../producto.html?id=6">
+        <div class="product-img">
+            <img src="../imagenes/caja-medera-perfumeria-torre-perfuvalle.png" alt="Caja Madera Torre">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Caja Madera Torre</h3>
+            <div class="product-meta">
+                <span class="product-capacity">packaging</span>
+                <span class="product-price">$5.800</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="7" data-category="packaging">
+    <a href="../producto.html?id=7">
+        <div class="product-img">
+            <img src="../imagenes/caja-stiques-perfumeria-perfuvalle.png" alt="Cajas 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Cajas 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="8" data-category="packaging">
+    <a href="../producto.html?id=8">
+        <div class="product-img">
+            <img src="../imagenes/cajas-perfumeria-perfuvalle.png" alt="Cajas Etiquetas">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Cajas Etiquetas</h3>
+            <div class="product-meta">
+                <span class="product-capacity">packaging</span>
+                <span class="product-price">$500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="9" data-category="packaging">
+    <a href="../producto.html?id=9">
+        <div class="product-img">
+            <img src="../imagenes/cofre-cafe-perfuvalle.png" alt="Cofre De Café">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Cofre De Café</h3>
+            <div class="product-meta">
+                <span class="product-capacity">packaging</span>
+                <span class="product-price">$20.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="10" data-category="packaging">
+    <a href="../producto.html?id=10">
+        <div class="product-img">
+            <img src="../imagenes/envace-plastico-crema-perfuvalle.png" alt="Envase Plástico Crema 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Envase Plástico Crema 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$2.300</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="11" data-category="packaging">
+    <a href="../producto.html?id=11">
+        <div class="product-img">
+            <img src="../imagenes/envaces-pet-bala-30ml-perfuvalle.png" alt="Envases PET Bala 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Envases PET Bala 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$750</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="12" data-category="packaging">
+    <a href="../producto.html?id=12">
+        <div class="product-img">
+            <img src="../imagenes/envaces-pet-bala-60ml-perfuvalle.png" alt="Envases PET Bala 60ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Envases PET Bala 60ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">60 ml</span>
+                <span class="product-price">$900</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="13" data-category="30ml">
+    <a href="../producto.html?id=13">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png" alt="Frasco ANI 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco ANI 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$2.300</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="14" data-category="50ml">
+    <a href="../producto.html?id=14">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-animal-50ml-perfuvalle.png" alt="Frasco Animal 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Animal 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="15" data-category="50ml">
+    <a href="../producto.html?id=15">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-ara-50-ml-perfuvalle.png" alt="Frasco Ara 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Ara 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.200</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="16" data-category="30ml">
+    <a href="../producto.html?id=16">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-ara-y-30-ml-perfuvalle.png" alt="Frasco Ara 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Ara 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$4.300</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="17" data-category="50ml">
+    <a href="../producto.html?id=17">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-belle-50-ml-perfuvalle.png" alt="Frasco Belle 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Belle 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="18" data-category="50ml">
+    <a href="../producto.html?id=18">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-berry-50-ml-perfuvalle.png" alt="Frasco Berry 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Berry 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$3.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="19" data-category="50ml">
+    <a href="../producto.html?id=19">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-boos-50-ml-perfuvalle.png" alt="Frasco Boos 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Boos 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$3.400</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="20" data-category="30ml">
+    <a href="../producto.html?id=20">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-booss-30-ml-perfuvalle.png" alt="Frasco Booss 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Booss 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$3.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="21" data-category="30ml">
+    <a href="../producto.html?id=21">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-cartiel-30-ml-perfuvalle.png" alt="Frasco Cartier 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Cartier 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$2.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="22" data-category="100ml">
+    <a href="../producto.html?id=22">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-cilindro-100-ml-perfuvalle.png" alt="Frasco Cilindro 100ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Cilindro 100ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">100 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="23" data-category="50ml">
+    <a href="../producto.html?id=23">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-coco-black-50-ml-perfuvalle.png" alt="Frasco Coco Black 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Coco Black 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="24" data-category="100ml">
+    <a href="../producto.html?id=24">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-copa-100-ml-perfuvalle.png" alt="Frasco Copa 100ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Copa 100ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">100 ml</span>
+                <span class="product-price">$5.800</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="25" data-category="100ml">
+    <a href="../producto.html?id=25">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-cristal-100-ml-perfuvalle.png" alt="Frasco Cristal 100ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Cristal 100ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">100 ml</span>
+                <span class="product-price">$5.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="26" data-category="50ml">
+    <a href="../producto.html?id=26">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-fame-50-ml-perfuvalle.png" alt="Frasco Fame 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Fame 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.250</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="27" data-category="50ml">
+    <a href="../producto.html?id=27">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-flaw-50ml-perfuvalle.png" alt="Frasco Flaw 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Flaw 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$3.400</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="28" data-category="30ml">
+    <a href="../producto.html?id=28">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-g.rush-30-ml-perfuvalle.png" alt="Frasco G.Rush 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco G.Rush 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$5.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="29" data-category="50ml">
+    <a href="../producto.html?id=29">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-jeanpaul-50-ml-perfuvalle.png" alt="Frasco Jean Paul 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Jean Paul 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$3.400</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="30" data-category="50ml">
+    <a href="../producto.html?id=30">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-manzana-50-ml-perfuvalle.png" alt="Frasco Manzana 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Manzana 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="31" data-category="50ml">
+    <a href="../producto.html?id=31">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-opal-eli-50-ml-perfuvalle.png" alt="Frasco Opal Eli 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Opal Eli 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="32" data-category="50ml">
+    <a href="../producto.html?id=32">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-paris-lujos-50-ml-perfuvalle.png" alt="Frasco Paris Lujo 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Paris Lujo 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="33" data-category="50ml">
+    <a href="../producto.html?id=33">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-penta-50-ml-perfuvalle.png" alt="Frasco Penta 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Penta 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="34" data-category="100ml">
+    <a href="../producto.html?id=34">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-RM-100-ml-perfuvalle.png" alt="Frasco RM 100ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco RM 100ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">100 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="35" data-category="30ml">
+    <a href="../producto.html?id=35">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-robot- 30-ml-perfuvalle.png" alt="Frasco Robot 30ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Robot 30ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">30 ml</span>
+                <span class="product-price">$6.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="36" data-category="10ml">
+    <a href="../producto.html?id=36">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-roll-on-10-ml-perfuvalle.png" alt="Frasco Roll On 10ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Roll On 10ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">10 ml</span>
+                <span class="product-price">$1.300</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="37" data-category="50ml">
+    <a href="../producto.html?id=37">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-salvaje-50-ml-perfuvalle.png" alt="Frasco Salvaje 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Salvaje 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$3.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="38" data-category="50ml">
+    <a href="../producto.html?id=38">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-sant-50-ml-perfuvalle.png" alt="Frasco Sant 50ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Sant 50ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">50 ml</span>
+                <span class="product-price">$4.000</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="39" data-category="100ml">
+    <a href="../producto.html?id=39">
+        <div class="product-img">
+            <img src="../imagenes/frasco-de-perfumeria-secret-100-ml-perfuvalle.png" alt="Frasco Secret 100ml">
+        </div>
+        <div class="product-info">
+            <h3 class="product-name">Frasco Secret 100ml</h3>
+            <div class="product-meta">
+                <span class="product-capacity">100 ml</span>
+                <span class="product-price">$2.500</span>
+            </div>
+            <div class="product-footer">
+                <button class="product-btn">
+                    <i class="fas fa-eye"></i>
+                    Ver Detalles
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="product-card" data-id="40" data-category="50ml">
+                    <a href="../producto.html?id=40">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-de-perfumeria-sultan-50-ml-perfuvalle.png" alt="Frasco Sultan 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Sultan 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="41" data-category="50ml">
+                    <a href="../producto.html?id=41">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-de-perfumeria-swarovski-50-ml-perfuvalle.png" alt="Frasco Swarovski 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Swarovski 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$1.750</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="42" data-category="30ml">
+                    <a href="../producto.html?id=42">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-de-perfumeria-trinity-30-ml-perfuvalle -envace-para-perfumeria.png" alt="Frasco Trinity 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Trinity 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$1.300</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="43" data-category="30ml">
+                    <a href="../producto.html?id=43">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-de-perfumeria-valentino-30-ml-perfuvalle.png" alt="Frasco Valentino 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="44" data-category="30ml">
+                    <a href="../producto.html?id=44">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-beby-30ml-perfuvalle.png" alt="Frasco Beby 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Beby 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.200</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="45" data-category="30ml">
+                    <a href="../producto.html?id=45">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-botton-30ml-perfuvalle.png" alt="Frasco Botton 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Botton 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.200</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="46" data-category="packaging">
+                    <a href="../producto.html?id=46">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-caja-medera-perfumeria-copa-perfuvalle.png" alt="Caja Madera Copa">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Caja Madera Copa</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">packaging</span>
+                                <span class="product-price">$5.800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="47" data-category="packaging">
+                    <a href="../producto.html?id=47">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-caja-medera-perfumeria-robot-perfuvalle.png" alt="Caja Madera Robot">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Caja Madera Robot</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">packaging</span>
+                                <span class="product-price">$5.800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="48" data-category="30ml">
+                    <a href="../producto.html?id=48">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-copa-30ml-perfuvalle.png" alt="Frasco Copa 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Copa 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="49" data-category="50ml">
+                    <a href="../producto.html?id=49">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-copa-50ml-perfuvalle.png" alt="Frasco Copa 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Copa 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$4.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="50" data-category="30ml">
+                    <a href="../producto.html?id=50">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-copa-parfum-30ml-perfuvalle.png" alt="Frasco Copa Parfum 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Copa Parfum 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.200</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="51" data-category="50ml">
+                    <a href="../producto.html?id=51">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-corazon-50ml-perfuvalle.png" alt="Frasco Corazón 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Corazón 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$4.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="52" data-category="50ml">
+                    <a href="../producto.html?id=52">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png" alt="Frasco Eros 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Eros 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="53" data-category="110ml">
+                    <a href="../producto.html?id=53">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-faro-110ml-perfuvalle.png" alt="Frasco Faro 110ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Faro 110ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">110 ml</span>
+                                <span class="product-price">$6.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="54" data-category="50ml">
+                    <a href="../producto.html?id=54">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-iris-50ml-perfuvalle.png" alt="Frasco Iris 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Iris 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$4.200</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="55" data-category="50ml">
+                    <a href="../producto.html?id=55">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-kalifa-50ml-perfuvalle.png" alt="Frasco Kalifa 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Kalifa 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.700</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="56" data-category="50ml">
+                    <a href="../producto.html?id=56">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-king-rosca-50ml-perfuvalle.png" alt="Frasco King Rosca 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco King Rosca 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="57" data-category="50ml">
+                    <a href="../producto.html?id=57">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-mary-50ml-perfuvalle.png" alt="Frasco Mary 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Mary 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$3.200</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="58" data-category="100ml">
+                    <a href="../producto.html?id=58">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-nina-100ml-perfuvalle.png" alt="Frasco Nina 100ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Nina 100ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">100 ml</span>
+                                <span class="product-price">$5.500</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="59" data-category="30ml">
+                    <a href="../producto.html?id=59">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-nina-30ml-perfuvalle.png" alt="Frasco Nina 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Nina 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$4.700</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="60" data-category="30ml">
+                    <a href="../producto.html?id=60">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-colores-30ml-perfuvalle.png" alt="Frasco Oso Colores 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Colores 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$6.500</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="61" data-category="30ml">
+                    <a href="../producto.html?id=61">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png" alt="Frasco Oso Negro 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Negro 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$6.500</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="62" data-category="50ml">
+                    <a href="../producto.html?id=62">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-negro-50ml-perfuvalle.png" alt="Frasco Oso Negro 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Negro 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$8.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="63" data-category="30ml">
+                    <a href="../producto.html?id=63">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-rosado-30ml-perfuvalle.png" alt="Frasco Oso Rosado 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Rosado 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$6.500</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="64" data-category="50ml">
+                    <a href="../producto.html?id=64">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-rosado-50ml-perfuvalle.png" alt="Frasco Oso Rosado 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Rosado 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$8.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="65" data-category="30ml">
+                    <a href="../producto.html?id=65">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-tornasol-30ml-perfuvalle.png" alt="Frasco Oso Tornasol 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Tornasol 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$8.500</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="66" data-category="50ml">
+                    <a href="../producto.html?id=66">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-oso-tornasol-50ml-perfuvalle.png" alt="Frasco Oso Tornasol 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Oso Tornasol 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$10.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="67" data-category="30ml">
+                    <a href="../producto.html?id=67">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-paris-30ml-perfuvalle.png" alt="Frasco Paris 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Paris 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.400</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="68" data-category="50ml">
+                    <a href="../producto.html?id=68">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-pegasut-50ml-perfuvalle.png" alt="Frasco Pegasut 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Pegasut 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$4.800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="69" data-category="packaging">
+                    <a href="../producto.html?id=69">
+                        <div class="product-img">
+                            <img src="../imagenes/goteros-perfuvalle.png" alt="Perfumero Recargable">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Perfumero Recargable</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">packaging</span>
+                                <span class="product-price">$4.800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="70" data-category="10ml">
+                    <a href="../producto.html?id=70">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-perfumero-10ml-perfuvalle.png" alt="Perfumero Plástico 10ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Perfumero Plástico 10ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">10 ml</span>
+                                <span class="product-price">$880</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="71" data-category="15ml">
+                    <a href="../producto.html?id=71">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-perfumero-15ml-perfuvalle.png" alt="Perfumero Plástico 15ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Perfumero Plástico 15ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">15 ml</span>
+                                <span class="product-price">$1.100</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+<div class="product-card" data-id="72" data-category="5ml">
+                    <a href="../producto.html?id=72">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-perfumero-5ml-perfuvalle.png" alt="Perfumero Plástico 5ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Perfumero Plástico 5ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">5 ml</span>
+                                <span class="product-price">$600</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="73" data-category="80ml">
+                    <a href="../producto.html?id=73">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-PUÑO-80ml-perfuvalle.png" alt="Frasco Puño 80ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Puño 80ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">80 ml</span>
+                                <span class="product-price">$5.800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="74" data-category="30ml">
+                    <a href="../producto.html?id=74">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-single-30ml-perfuvalle.png" alt="Frasco Single 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Single 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$1.700</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="75" data-category="30ml">
+                    <a href="../producto.html?id=75">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-single-color-30ml-perfuvalle.png" alt="Frasco Single Color 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Single Color 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$1.800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="76" data-category="50ml">
+                    <a href="../producto.html?id=76">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-valentino- color-50ml-perfuvalle.png" alt="Frasco Valentino Color 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino Color 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="77" data-category="30ml">
+                    <a href="../producto.html?id=77">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-valentino-30ml-perfuvalle.png" alt="Frasco Valentino 30ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino 30ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">30 ml</span>
+                                <span class="product-price">$3.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="78" data-category="50ml">
+                    <a href="../producto.html?id=78">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-valentino-50ml-perfuvalle.png" alt="Frasco Valentino 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="79" data-category="100ml">
+                    <a href="../producto.html?id=79">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle (2).png" alt="Frasco Valentino Lujo 100ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino Lujo 100ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">100 ml</span>
+                                <span class="product-price">$6.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="80" data-category="100ml">
+                    <a href="../producto.html?id=80">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle.png" alt="Frasco Valentino Lujo 100ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino Lujo 100ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">100 ml</span>
+                                <span class="product-price">$6.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="81" data-category="50ml">
+                    <a href="../producto.html?id=81">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-valentino-lujo-50ml-perfuvalle.png" alt="Frasco Valentino Lujo 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Valentino Lujo 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="82" data-category="50ml">
+                    <a href="../producto.html?id=82">
+                        <div class="product-img">
+                            <img src="../imagenes/frasco-perfumeria-xer-50ml-perfuvalle.png" alt="Frasco Xer 50ml">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Frasco Xer 50ml</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">50 ml</span>
+                                <span class="product-price">$5.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="83" data-category="packaging">
+                    <a href="../producto.html?id=83">
+                        <div class="product-img">
+                            <img src="../imagenes/goteros-perfuvalle.png" alt="Goteros varios">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Goteros varios</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">packaging</span>
+                                <span class="product-price">$800</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="84" data-category="packaging">
+                    <a href="../producto.html?id=84">
+                        <div class="product-img">
+                            <img src="../imagenes/GRAMERA.png" alt="Gramera">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gramera</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">packaging</span>
+                                <span class="product-price">$50.000</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-id="85" data-category="packaging">
+                    <a href="../producto.html?id=85">
+                        <div class="product-img">
+                            <img src="../imagenes/PAPELITOS.png" alt="Tiras de Probador">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Tiras de Probador</h3>
+                            <div class="product-meta">
+                                <span class="product-capacity">packaging</span>
+                                <span class="product-price">$18.500</span>
+                            </div>
+                            <div class="product-footer">
+                                <button class="product-btn">
+                                    <i class="fas fa-eye"></i>
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Paginación 
+            <div class="pagination">
+                <button class="pagination-btn prev">
+                    <i class="fas fa-chevron-left"></i> Anterior
+                </button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">5</button>
+                <button class="pagination-btn next">
+                    Siguiente <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>-->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="../imagenes/logo-perfuvalle.png" alt="Perfuvalle Logo">
+                    </div>
+                    
+                    <p>Distribuidores mayoristas de frascos y envases para perfumes. Calidad garantizada y los mejores precios del mercado.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Catálogo</a></li>
+                        <li><a href="index.html#about">Nosotros</a></li>
+                        <li><a href="index.html#testimonials">Testimonios</a></li>
+                        <li><a href="index.html#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Categorías</h3>
+                    
+                    <ul>
+                        <li><a href="productos.html?categoria=30ml">Frascos 30ml</a></li>
+                        <li><a href="productos.html?categoria=50ml">Frascos 50ml</a></li>
+                        <li><a href="productos.html?categoria=100ml">Frascos 100ml</a></li>
+                        <li><a href="productos.html?categoria=especiales">Diseños Especiales</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contacto</h3>
+                    
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cali, Valle del Cauca, Colombia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+57 300 757 2169</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@perfuvalle.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun - Sáb: 8:00AM - 6:00PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-title">Suscríbete</h3>
+                    
+                    <p>Recibe nuestras promociones y novedades</p>
+                    
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Tu correo electrónico">
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Perfuvalle - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573007572169?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20frascos%20para%20perfumes%20al%20por%20mayor." class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+        
+        // Product Filtering
+        const categoryFilter = document.getElementById('category-filter');
+        const sortFilter = document.getElementById('sort-filter');
+        const searchFilter = document.getElementById('search-filter');
+        const applyFiltersBtn = document.getElementById('apply-filters');
+        const productGrid = document.getElementById('product-grid');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        // Get URL parameters for initial filtering
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('categoria');
+        
+        // Set initial filter based on URL parameter
+        if (categoryParam) {
+            categoryFilter.value = categoryParam;
+            filterProducts();
+        }
+        
+        // Apply filters when button is clicked
+        applyFiltersBtn.addEventListener('click', filterProducts);
+        
+        // Apply filters when Enter is pressed in search box
+        searchFilter.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                filterProducts();
+            }
+        });
+
+function filterProducts() {
+    const category = categoryFilter.value;
+    const sort = sortFilter.value;
+    const search = searchFilter.value.toLowerCase();
+    
+    // Filter products
+    let visibleCount = 0;
+    
+    productCards.forEach(card => {
+        const productCategory = card.getAttribute('data-category');
+        const productName = card.querySelector('.product-name').textContent.toLowerCase();
+        // Corrigiendo el manejo de precios - asegurándose de manejar correctamente los símbolos
+        const priceText = card.querySelector('.product-price').textContent;
+        const productPrice = parseFloat(priceText.replace('$', '').replace(/\./g, '').replace(',', ''));
+        
+        // Apply category filter
+        let visible = category === 'all' || productCategory === category;
+        
+        // Apply search filter
+        if (visible && search !== '') {
+            visible = productName.includes(search);
+        }
+        
+        if (visible) {
+            card.style.display = 'block';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // Sort products (would need to be implemented with a more complex sorting algorithm)
+    // This is a simplified version
+    const productArray = Array.from(productCards);
+    
+    switch (sort) {
+        case 'name-asc':
+            productArray.sort((a, b) => {
+                const nameA = a.querySelector('.product-name').textContent;
+                const nameB = b.querySelector('.product-name').textContent;
+                return nameA.localeCompare(nameB);
+            });
+            break;
+        case 'name-desc':
+            productArray.sort((a, b) => {
+                const nameA = a.querySelector('.product-name').textContent;
+                const nameB = b.querySelector('.product-name').textContent;
+                return nameB.localeCompare(nameA);
+            });
+            break;
+        case 'price-asc':
+            productArray.sort((a, b) => {
+                // Corregimos el método de extracción del precio
+                const priceTextA = a.querySelector('.product-price').textContent;
+                const priceTextB = b.querySelector('.product-price').textContent;
+                const priceA = parseFloat(priceTextA.replace('$', '').replace(/\./g, '').replace(',', ''));
+                const priceB = parseFloat(priceTextB.replace('$', '').replace(/\./g, '').replace(',', ''));
+                return priceA - priceB;
+            });
+            break;
+        case 'price-desc':
+            productArray.sort((a, b) => {
+                // Corregimos el método de extracción del precio
+                const priceTextA = a.querySelector('.product-price').textContent;
+                const priceTextB = b.querySelector('.product-price').textContent;
+                const priceA = parseFloat(priceTextA.replace('$', '').replace(/\./g, '').replace(',', ''));
+                const priceB = parseFloat(priceTextB.replace('$', '').replace(/\./g, '').replace(',', ''));
+                return priceB - priceA;
+            });
+            break;
+    }
+    
+    // Reorder DOM elements based on sort
+    productArray.forEach(card => {
+        productGrid.appendChild(card);
+    });
+    
+    // Update URL with filter parameters
+    const newURL = `${window.location.pathname}?categoria=${category}`;
+    window.history.replaceState({}, '', newURL);
+    
+    // Show "No products found" message if needed
+    if (visibleCount === 0) {
+        if (!document.querySelector('.no-products')) {
+            const noProductsDiv = document.createElement('div');
+            noProductsDiv.className = 'no-products';
+            noProductsDiv.innerHTML = `
+                <div class="no-products-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="no-products-title">No se encontraron productos</h3>
+                <p class="no-products-text">Intenta con otros criterios de búsqueda o revisa todas nuestras categorías.</p>
+                <a href="productos.html" class="no-products-btn">Ver Todos los Productos</a>
+            `;
+            productGrid.appendChild(noProductsDiv);
+        }
+    } else {
+        const noProductsDiv = document.querySelector('.no-products');
+        if (noProductsDiv) {
+            noProductsDiv.remove();
+        }
+    }
+}
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Product card click
+        productCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.closest('.product-btn')) {
+                    const link = card.querySelector('a').getAttribute('href');
+                    window.location.href = link;
+                }
+            });
+        });
+        
+        // Initialize product data (would be used for more advanced functionality)
+        const productData = [
+            // Este array contendría todos los datos de productos en un entorno real
+            // Cada producto tendría: id, nombre, descripción, capacidad, precio, imagen, etc.
+            {id: 13, name: "Frasco ANI 30ml", capacity: "30 ml", price: 2300, image: "../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png", category: "30ml"},
+            {id: 14, name: "Frasco ANIMAL 50ml", capacity: "50 ml", price: 4000, image: "../imagenes/frasco-de-perfumeria-animal-50ml-perfuvalle.png", category: "50ml"},
+            {id: 15, name: "Frasco ARA 50ml", capacity: "50 ml", price: 4200, image: "../imagenes/frasco-de-perfumeria-ara-50-ml-perfuvalle.png", category: "50ml"},
+            // Se agregarían todos los productos aquí
+        ];
+    </script>
+</body>
+</html>

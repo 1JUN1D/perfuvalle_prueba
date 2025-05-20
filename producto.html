@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto | Perfuvalle</title>
+    <meta name="description" content="Detalle del frasco seleccionado. Compra al por mayor con los mejores precios.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e8b4d;
+            --secondary-color: #4CAF50;
+            --accent-color: #8BC34A;
+            --light-color: #e8f5e9;
+            --dark-color: #1b5e20;
+            --gray-color: #f5f5f5;
+            --text-color: #333;
+            --white-color: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-tagline {
+            font-size: 0.9rem;
+            display: block;
+            font-weight: 300;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-nav li {
+            position: relative;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .main-nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--white-color);
+            transition: var(--transition);
+        }
+
+        .main-nav a:hover:after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-form {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            border: none;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white-color);
+            transition: var(--transition);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 250px;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            color: var(--white-color);
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-btn {
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            margin-bottom: 30px;
+            background-color: var(--light-color);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-item:not(:last-child):after {
+            content: '/';
+            margin: 0 10px;
+            color: #999;
+        }
+
+        .breadcrumb-link {
+            color: #666;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-link:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb-item.active .breadcrumb-link {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Product Details */
+        .product-details {
+            padding: 50px 0;
+        }
+
+        .product-details-container {
+            display: flex;
+            gap: 50px;
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-gallery {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .product-main-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-main-image img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .product-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .product-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .product-meta-item i {
+            color: var(--primary-color);
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .product-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .product-description {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .product-features {
+            margin-bottom: 30px;
+        }
+
+        .product-features-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .product-features-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .product-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-feature-item i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .quantity-label {
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .quantity-input {
+            width: 60px;
+            height: 40px;
+            border: none;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            text-align: center;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .quantity-input:focus {
+            outline: none;
+        }
+
+        .add-to-cart-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background-color: #25D366;
+            color: var(--white-color);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+        .product-share {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .product-share-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .product-share-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .product-share-link {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--white-color);
+            transition: var(--transition);
+        }
+
+        .product-share-link.facebook {
+            background-color: #3b5998;
+        }
+
+        .product-share-link.twitter {
+            background-color: #1da1f2;
+        }
+
+        .product-share-link.whatsapp {
+            background-color: #25D366;
+        }
+
+        .product-share-link.email {
+            background-color: #ea4335;
+        }
+
+        .product-share-link:hover {
+            opacity: 0.8;
+            transform: translateY(-3px);
+        }
+
+        /* Related Products */
+        .related-products {
+            padding-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .related-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .product-card-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.8em;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .product-capacity {
+            color: #666;
+        }
+
+        .product-price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-btn {
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .product-btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        .product-btn i {
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--white-color);
+            position: relative;
+        }
+
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-color);
+        }
+
+        .footer-newsletter p {
+            margin-bottom: 15px;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .newsletter-input {
+            padding: 10px 15px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white-color);
+            flex-grow: 1;
+            border-radius: 30px 0 0 30px;
+            font-family: inherit;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+        }
+
+        .newsletter-btn {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .product-details-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-gallery {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .product-info {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 20px;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+            }
+
+            .search-form {
+                display: none;
+            }
+
+            .product-title {
+                font-size: 1.8rem;
+            }
+
+            .product-features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .related-products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-title {
+                font-size: 1.5rem;
+            }
+
+            .product-main-image {
+                height: 300px;
+            }
+
+            .product-price {
+                font-size: 1.6rem;
+            }
+
+            .add-to-cart-btn,
+            .whatsapp-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <img src="../imagenes/logo-perfuvalle.png" alt="Perfuvalle Logo">
+            </div>
+            
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../productos.html">Catálogo</a></li>
+                    <li><a href="../index.html#about">Nosotros</a></li>
+                    <li><a href="../index.html#testimonials">Clientes</a></li>
+                    <li><a href="../index.html#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Buscar frascos...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
+                <a href="../index.html#contact" class="contact-btn">
+                    <i class="fas fa-phone-alt"></i>
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="../index.html" class="breadcrumb-link">Inicio</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../productos.html" class="breadcrumb-link">Catálogo</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <span class="breadcrumb-link" id="product-breadcrumb-name">Frasco Seleccionado</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="product-details">
+        <div class="container">
+            <div class="product-details-container">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="" alt="Producto" id="product-main-image">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 class="product-title" id="product-title">Cargando producto...</h1>
+                    
+                    <div class="product-meta">
+                        <div class="product-meta-item">
+                            <i class="fas fa-flask"></i>
+                            <span id="product-capacity">--</span>
+                        </div>
+                        
+                        <div class="product-meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span id="product-category">--</span>
+                        </div>
+                        
+                        <div class="product-meta-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envío a todo Colombia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-price" id="product-price">
+                        $0 <span>por unidad</span>
+                    </div>
+                    
+                    <div class="product-description" id="product-description">
+                        <p>Cargando descripción del producto...</p>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3 class="product-features-title">Características</h3>
+                        
+                        <ul class="product-features-list">
+                            <li class="product-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Frasco tipo rosca</span>
+                            </li>
+                            <li class="product-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Material de alta calidad</span>
+                            </li>
+                            <li class="product-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Amplia apertura para fácil llenado</span>
+                            </li>
+                            <li class="product-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Apto para perfumes y lociones</span>
+                            </li>
+                            <li class="product-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Diseño elegante y atractivo</span>
+                            </li>
+                            <li class="product-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Disponible en varios colores</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <span class="quantity-label">Cantidad:</span>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn quantity-minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" min="1" value="1" class="quantity-input" id="quantity-input">
+                            <button class="quantity-btn quantity-plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <button class="add-to-cart-btn" id="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                    
+                    <a href="#" class="whatsapp-btn" id="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Comprar por WhatsApp
+                    </a>
+                    
+                    <div class="product-share">
+                        <h4 class="product-share-title">Compartir:</h4>
+                        
+                        <div class="product-share-links">
+                            <a href="#" class="product-share-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="product-share-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="product-share-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="product-share-link email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Productos Relacionados</h2>
+            </div>
+            
+            <div class="related-products-grid" id="related-products-grid">
+                <!-- Los productos relacionados se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="../imagenes/logo-perfuvalle.png" alt="Perfuvalle Logo">
+                    </div>
+                    
+                    <p>Distribuidores mayoristas de frascos y envases para perfumes. Calidad garantizada y los mejores precios del mercado.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../productos.html">Catálogo</a></li>
+                        <li><a href="../index.html#about">Nosotros</a></li>
+                        <li><a href="../index.html#testimonials">Testimonios</a></li>
+                        <li><a href="../index.html#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Categorías</h3>
+                    
+                    <ul>
+                        <li><a href="productos.html?categoria=30ml">Frascos 30ml</a></li>
+                        <li><a href="productos.html?categoria=50ml">Frascos 50ml</a></li>
+                        <li><a href="productos.html?categoria=100ml">Frascos 100ml</a></li>
+                        <li><a href="productos.html?categoria=especiales">Diseños Especiales</a></li>
+                        <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contacto</h3>
+                    
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cali, Valle del Cauca, Colombia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+57 300 757 2169</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@perfuvalle.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun - Sáb: 8:00AM - 6:00PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-title">Suscríbete</h3>
+                    
+                    <p>Recibe nuestras promociones y novedades</p>
+                    
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Tu correo electrónico">
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Perfuvalle - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573007572169?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20frascos%20para%20perfumes%20al%20por%20mayor." class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+        
+        // Quantity controls
+        const quantityInput = document.getElementById('quantity-input');
+        const minusBtn = document.querySelector('.quantity-minus');
+        const plusBtn = document.querySelector('.quantity-plus');
+        
+        minusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+                quantityInput.value = value - 1;
+                updateWhatsAppLink();
+            }
+        });
+        
+        plusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+            updateWhatsAppLink();
+        });
+        
+        quantityInput.addEventListener('change', () => {
+            let value = parseInt(quantityInput.value);
+            if (value < 1) {
+                quantityInput.value = 1;
+            }
+            updateWhatsAppLink();
+        });
+        
+        // Producto database
+const products = [
+    {
+        id: 1,
+        name: "Alcohol Con Fijador 1L",
+        description: "Solución alcohólica con fijador de 1 L, perfecta para preparar y fijar fragancias.",
+        capacity: "1 L",
+        price: 10000,
+        image: "../imagenes/alcohol-perfumeria-perfuvalle.png",
+        category: "alcohol",
+        stock: true
+    },
+    {
+        id: 2,
+        name: "Bolsas Grandes 100ml",
+        description: "Bolsas Grandes 100ml de 100 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "100 ml",
+        price: 450,
+        image: "../imagenes/bolsas-perfumeria-grandes-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 3,
+        name: "Bolsas Single 30ml",
+        description: "Bolsas Single 30ml de 30 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "30 ml",
+        price: 400,
+        image: "../imagenes/bolsas-perfumeria-single-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 4,
+        name: "Caja Madera Moschino",
+        description: "Caja Madera Moschino de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 5800,
+        image: "../imagenes/caja-medera-oso-perfumeria--perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 5,
+        name: "Caja Madera Good Girl",
+        description: "Caja Madera Good Girl de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 5800,
+        image: "../imagenes/caja-medera-perfumeria-tacon-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 6,
+        name: "Caja Madera Torre",
+        description: "Caja Madera Torre de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 5800,
+        image: "../imagenes/caja-medera-perfumeria-torre-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 7,
+        name: "Cajas 30ml",
+        description: "Cajas 30ml de 30 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "30 ml",
+        price: 500,
+        image: "../imagenes/caja-stiques-perfumeria-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 8,
+        name: "Cajas Etiquetas",
+        description: "Cajas Etiquetas de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 500,
+        image: "../imagenes/cajas-perfumeria-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 9,
+        name: "Cofre De Café",
+        description: "Cofre De Café de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 20000,
+        image: "../imagenes/cofre-cafe-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 10,
+        name: "Envase Plástico Crema 30ml",
+        description: "Envase Plástico Crema 30ml de 30 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "30 ml",
+        price: 2300,
+        image: "../imagenes/envace-plastico-crema-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 11,
+        name: "Envases PET Bala 30ml",
+        description: "Elegante Envases PET Bala 30ml con capacidad de 30 ml, ideal para perfumes y lociones.",
+        capacity: "30 ml",
+        price: 750,
+        image: "../imagenes/envaces-pet-bala-30ml-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 12,
+        name: "Envases PET Bala 60ml",
+        description: "Elegante Envases PET Bala 60ml con capacidad de 60 ml, ideal para perfumes y lociones.",
+        capacity: "60 ml",
+        price: 900,
+        image: "../imagenes/envaces-pet-bala-60ml-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 13,
+        name: "Frasco ANI 30ml",
+        description: "Elegante Frasco ANI 30ml con capacidad de 30 ml, ideal para perfumes y lociones.",
+        capacity: "30 ml",
+        price: 2300,
+        image: "../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 14,
+        name: "Frasco Animal 50ml",
+        description: "Elegante Frasco Animal 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-animal-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 15,
+        name: "Frasco Ara 50ml",
+        description: "Elegante Frasco Ara 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 4200,
+        image: "../imagenes/frasco-de-perfumeria-ara-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 16,
+        name: "Frasco Ara 30ml",
+        description: "Elegante Frasco Ara 30ml con capacidad de 30 ml, ideal para perfumes y lociones.",
+        capacity: "30 ml",
+        price: 4300,
+        image: "../imagenes/frasco-de-perfumeria-ara-y-30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 17,
+        name: "Frasco Belle 50ml",
+        description: "Elegante Frasco Belle 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-belle-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 18,
+        name: "Frasco Berry 50ml",
+        description: "Elegante Frasco Berry 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 3500,
+        image: "../imagenes/frasco-de-perfumeria-berry-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 19,
+        name: "Frasco Boos 50ml",
+        description: "Elegante Frasco Boos 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 3400,
+        image: "../imagenes/frasco-de-perfumeria-boos-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 20,
+        name: "Frasco Booss 30ml",
+        description: "Elegante Frasco Booss 30ml con capacidad de 30 ml, ideal para perfumes y lociones.",
+        capacity: "30 ml",
+        price: 3000,
+        image: "../imagenes/frasco-de-perfumeria-booss-30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 21,
+        name: "Frasco Cartier 30ml",
+        description: "Elegante Frasco Cartier 30ml con capacidad de 30 ml, ideal para perfumes y lociones.",
+        capacity: "30 ml",
+        price: 2000,
+        image: "../imagenes/frasco-de-perfumeria-cartiel-30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 22,
+        name: "Frasco Cilindro 100ml",
+        description: "Elegante Frasco Cilindro 100ml con capacidad de 100 ml, ideal para perfumes y lociones.",
+        capacity: "100 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-cilindro-100-ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 23,
+        name: "Frasco Coco Black 50ml",
+        description: "Elegante Frasco Coco Black 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-coco-black-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 24,
+        name: "Frasco Copa 100ml",
+        description: "Elegante Frasco Copa 100ml con capacidad de 100 ml, ideal para perfumes y lociones.",
+        capacity: "100 ml",
+        price: 5800,
+        image: "../imagenes/frasco-de-perfumeria-copa-100-ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 25,
+        name: "Frasco Cristal 100ml",
+        description: "Elegante Frasco Cristal 100ml con capacidad de 100 ml, ideal para perfumes y lociones.",
+        capacity: "100 ml",
+        price: 5500,
+        image: "../imagenes/frasco-de-perfumeria-cristal-100-ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 26,
+        name: "Frasco Fame 50ml",
+        description: "Elegante Frasco Fame 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 4250,
+        image: "../imagenes/frasco-de-perfumeria-fame-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 27,
+        name: "Frasco Flaw 50ml",
+        description: "Elegante Frasco Flaw 50ml con capacidad de 50 ml, ideal para perfumes y lociones.",
+        capacity: "50 ml",
+        price: 3400,
+        image: "../imagenes/frasco-de-perfumeria-flaw-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 28,
+        name: "Frasco G.Rush 30ml",
+        description: "Elegante Frasco G.Rush 30ml con capacidad de 30 ml, ideal para perfumes y lociones.",
+        capacity: "30 ml",
+        price: 5500,
+        image: "../imagenes/frasco-de-perfumeria-g.rush-30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    // Continuación de const products = [
+    {
+        id: 29,
+        name: "Frasco Jean Paul 50ml",
+        description: "Elegante Frasco Jean Paul 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 3400,
+        image: "../imagenes/frasco-de-perfumeria-jeanpaul-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 30,
+        name: "Frasco Manzana 50ml",
+        description: "Elegante Frasco Manzana 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-manzana-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 31,
+        name: "Frasco Opal Eli 50ml",
+        description: "Elegante Frasco Opal Eli 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-opal-eli-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 32,
+        name: "Frasco Paris Lujo 50ml",
+        description: "Elegante Frasco Paris Lujo 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4500,
+        image: "../imagenes/frasco-de-perfumeria-paris-lujos-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 33,
+        name: "Frasco Penta 50ml",
+        description: "Elegante Frasco Penta 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-penta-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 34,
+        name: "Frasco RM 100ml",
+        description: "Elegante Frasco RM 100ml con capacidad de 100 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "100 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-RM-100-ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 35,
+        name: "Frasco Robot 30ml",
+        description: "Elegante Frasco Robot 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 6500,
+        image: "../imagenes/frasco-de-perfumeria-robot- 30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 36,
+        name: "Frasco Roll On 10ml",
+        description: "Elegante Frasco Roll On 10ml con capacidad de 10 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "10 ml",
+        price: 1300,
+        image: "../imagenes/frasco-de-perfumeria-roll-on-10-ml-perfuvalle.png",
+        category: "10ml",
+        stock: true
+    },
+    {
+        id: 37,
+        name: "Frasco Salvaje 50ml",
+        description: "Elegante Frasco Salvaje 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 3500,
+        image: "../imagenes/frasco-de-perfumeria-salvaje-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 38,
+        name: "Frasco Sant 50ml",
+        description: "Elegante Frasco Sant 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-de-perfumeria-sant-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 39,
+        name: "Frasco Secret 100ml",
+        description: "Elegante Frasco Secret 100ml con capacidad de 100 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "100 ml",
+        price: 2500,
+        image: "../imagenes/frasco-de-perfumeria-secret-100-ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 40,
+        name: "Frasco Sultan 50ml",
+        description: "Elegante Frasco Sultan 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-de-perfumeria-sultan-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 41,
+        name: "Frasco Swarovski 50ml",
+        description: "Elegante Frasco Swarovski 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 1750,
+        image: "../imagenes/frasco-perfumeria-swarovski-50-ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 42,
+        name: "Frasco Trinity 30ml",
+        description: "Elegante Frasco Trinity 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 1300,
+        image: "../imagenes/frasco-de-perfumeria-trinity-30-ml-perfuvalle -envace-para-perfumeria.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 43,
+        name: "Frasco Valentino 30ml",
+        description: "Elegante Frasco Valentino 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3000,
+        image: "../imagenes/frasco-de-perfumeria-valentino-30-ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 44,
+        name: "Frasco Beby 30ml",
+        description: "Elegante Frasco Beby 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3200,
+        image: "../imagenes/frasco-perfumeria-beby-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 45,
+        name: "Frasco Botton 30ml",
+        description: "Elegante Frasco Botton 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3200,
+        image: "../imagenes/frasco-perfumeria-botton-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 46,
+        name: "Caja Madera Copa",
+        description: "Caja Madera Copa de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 5800,
+        image: "../imagenes/frasco-perfumeria-caja-medera-perfumeria-copa-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 47,
+        name: "Caja Madera Robot",
+        description: "Caja Madera Robot de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 5800,
+        image: "../imagenes/frasco-perfumeria-caja-medera-perfumeria-robot-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 48,
+        name: "Frasco Copa 30ml",
+        description: "Elegante Frasco Copa 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3000,
+        image: "../imagenes/frasco-perfumeria-copa-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 49,
+        name: "Frasco Copa Parfum 30ml",
+        description: "Elegante Frasco Copa Parfum 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3200,
+        image: "../imagenes/frasco-perfumeria-copa-parfum-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 50,
+        name: "Frasco Corazón 50ml",
+        description: "Elegante Frasco Corazón 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4000,
+        image: "../imagenes/frasco-perfumeria-corazon-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 51,
+        name: "Frasco Eros 50ml",
+        description: "Elegante Frasco Eros 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 52,
+        name: "Frasco Faro 110ml",
+        description: "Elegante Frasco Faro 110ml con capacidad de 110 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "110 ml",
+        price: 6000,
+        image: "../imagenes/frasco-perfumeria-faro-110ml-perfuvalle.png",
+        category: "110ml",
+        stock: true
+    },
+    {
+        id: 53,
+        name: "Frasco Iris 50ml",
+        description: "Elegante Frasco Iris 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4200,
+        image: "../imagenes/frasco-perfumeria-iris-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 54,
+        name: "Frasco Kalifa 50ml",
+        description: "Elegante Frasco Kalifa 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5700,
+        image: "../imagenes/frasco-perfumeria-kalifa-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 55,
+        name: "Frasco King Rosca 50ml",
+        description: "Elegante Frasco King Rosca 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-perfumeria-king-rosca-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 56,
+        name: "Frasco Mary 50ml",
+        description: "Elegante Frasco Mary 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 3200,
+        image: "../imagenes/frasco-perfumeria-mary-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 57,
+        name: "Frasco Nina 100ml",
+        description: "Elegante Frasco Nina 100ml con capacidad de 100 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "100 ml",
+        price: 5500,
+        image: "../imagenes/frasco-perfumeria-nina-100ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 58,
+        name: "Frasco Nina 30ml",
+        description: "Elegante Frasco Nina 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 4700,
+        image: "../imagenes/frasco-perfumeria-nina-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 59,
+        name: "Frasco Oso Colores 30ml",
+        description: "Elegante Frasco Oso Colores 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 6500,
+        image: "../imagenes/frasco-perfumeria-oso-colores-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 60,
+        name: "Frasco Oso Negro 30ml",
+        description: "Elegante Frasco Oso Negro 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 6500,
+        image: "../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 61,
+        name: "Frasco Oso Negro 50ml",
+        description: "Elegante Frasco Oso Negro 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 8000,
+        image: "../imagenes/frasco-perfumeria-oso-negro-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 62,
+        name: "Frasco Oso Rosado 30ml",
+        description: "Elegante Frasco Oso Rosado 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 6500,
+        image: "../imagenes/frasco-perfumeria-oso-rosado-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 63,
+        name: "Frasco Oso Rosado 50ml",
+        description: "Elegante Frasco Oso Rosado 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 8000,
+        image: "../imagenes/frasco-perfumeria-oso-rosado-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 64,
+        name: "Frasco Oso Tornasol 30ml",
+        description: "Elegante Frasco Oso Tornasol 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 8500,
+        image: "../imagenes/frasco-perfumeria-oso-tornasol-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 65,
+        name: "Frasco Oso Tornasol 30ml",
+        description: "Elegante Frasco Oso Tornasol 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 8500,
+        image: "../imagenes/frasco-perfumeria-oso-tornasol-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 66,
+        name: "Frasco Oso Tornasol 50ml",
+        description: "Elegante Frasco Oso Tornasol 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 10000,
+        image: "../imagenes/frasco-perfumeria-oso-tornasol-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 67,
+        name: "Frasco Paris 30ml",
+        description: "Elegante Frasco Paris 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3400,
+        image: "../imagenes/frasco-perfumeria-paris-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 68,
+        name: "Frasco Pegasut 50ml",
+        description: "Elegante Frasco Pegasut 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 4800,
+        image: "../imagenes/frasco-perfumeria-pegasut-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 69,
+        name: "Perfumero Recargable",
+        description: "Perfumero Recargable de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 4800,
+        image: "../imagenes/goteros-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 70,
+        name: "Perfumero Plástico 10ml",
+        description: "Perfumero Plástico 10ml de 10 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "10 ml",
+        price: 880,
+        image: "../imagenes/frasco-perfumeria-perfumero-10ml-perfuvalle.png",
+        category: "10ml",
+        stock: true
+    },
+    {
+        id: 71,
+        name: "Perfumero Plástico 15ml",
+        description: "Perfumero Plástico 15ml de 15 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "15 ml",
+        price: 1100,
+        image: "../imagenes/frasco-perfumeria-perfumero-15ml-perfuvalle.png",
+        category: "15ml",
+        stock: true
+    },
+    {
+        id: 72,
+        name: "Perfumero Plástico 5ml",
+        description: "Perfumero Plástico 5ml de 5 ml, ideal para packaging profesional y presentación de productos.",
+        capacity: "5 ml",
+        price: 600,
+        image: "../imagenes/frasco-perfumeria-perfumero-5ml-perfuvalle.png",
+        category: "5ml",
+        stock: true
+    },
+    {
+        id: 73,
+        name: "Frasco Puño 80ml",
+        description: "Elegante Frasco Puño 80ml con capacidad de 80 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "80 ml",
+        price: 5800,
+        image: "../imagenes/frasco-perfumeria-PUÑO-80ml-perfuvalle.png",
+        category: "80ml",
+        stock: true
+    },
+    {
+        id: 74,
+        name: "Frasco Single 30ml",
+        description: "Elegante Frasco Single 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 1700,
+        image: "../imagenes/frasco-perfumeria-single-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 75,
+        name: "Frasco Single Color 30ml",
+        description: "Elegante Frasco Single Color 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 1800,
+        image: "../imagenes/frasco-perfumeria-single-color-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 76,
+        name: "Frasco Valentino Color 50ml",
+        description: "Elegante Frasco Valentino Color 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-perfumeria-valentino- color-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 77,
+        name: "Frasco Valentino 30ml",
+        description: "Elegante Frasco Valentino 30ml con capacidad de 30 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "30 ml",
+        price: 3000,
+        image: "../imagenes/frasco-perfumeria-valentino-30ml-perfuvalle.png",
+        category: "30ml",
+        stock: true
+    },
+    {
+        id: 78,
+        name: "Frasco Valentino 50ml",
+        description: "Elegante Frasco Valentino 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-perfumeria-valentino-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 79,
+        name: "Frasco Valentino Lujo 100ml",
+        description: "Elegante Frasco Valentino Lujo 100ml con capacidad de 100 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "100 ml",
+        price: 6000,
+        image: "../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle (2).png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 80,
+        name: "Frasco Valentino Lujo 100ml",
+        description: "Elegante Frasco Valentino Lujo 100ml con capacidad de 100 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "100 ml",
+        price: 6000,
+        image: "../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle.png",
+        category: "100ml",
+        stock: true
+    },
+    {
+        id: 81,
+        name: "Frasco Valentino Lujo 50ml",
+        description: "Elegante Frasco Valentino Lujo 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-perfumeria-valentino-lujo-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 82,
+        name: "Frasco Xer 50ml",
+        description: "Elegante Frasco Xer 50ml con capacidad de 50 ml, ideal para perfumes y lociones. Con un diseño sofisticado que aporta distinción a tus creaciones.",
+        capacity: "50 ml",
+        price: 5000,
+        image: "../imagenes/frasco-perfumeria-xer-50ml-perfuvalle.png",
+        category: "50ml",
+        stock: true
+    },
+    {
+        id: 83,
+        name: "Goteros varios",
+        description: "Goteros varios de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 800,
+        image: "../imagenes/goteros-perfuvalle.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 84,
+        name: "Gramera",
+        description: "Gramera de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 50000,
+        image: "../imagenes/GRAMERA.png",
+        category: "packaging",
+        stock: true
+    },
+    {
+        id: 85,
+        name: "Tiras de Probador",
+        description: "Tiras de Probador de packaging, ideal para packaging profesional y presentación de productos.",
+        capacity: "packaging",
+        price: 18500,
+        image: "../imagenes/PAPELITOS.png",
+        category: "packaging",
+        stock: true
+    }
+
+        ];
+        
+        // Obtener ID del producto desde la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+        
+        // Función para cargar los detalles del producto
+        function loadProductDetails() {
+            // Buscar el producto por ID
+            const product = products.find(p => p.id === productId);
+            
+            if (product) {
+                // Actualizar los elementos del DOM con la información del producto
+                document.getElementById('product-breadcrumb-name').textContent = product.name;
+                document.getElementById('product-title').textContent = product.name;
+                document.getElementById('product-capacity').textContent = product.capacity;
+                document.getElementById('product-category').textContent = product.category;
+                document.getElementById('product-price').innerHTML = `${product.price.toLocaleString()} <span>por unidad</span>`;
+                document.getElementById('product-description').innerHTML = `<p>${product.description}</p>`;
+                document.getElementById('product-main-image').src = product.image;
+                document.getElementById('product-main-image').alt = product.name;
+                
+                // Actualizar el título de la página
+                document.title = `${product.name} | Perfuvalle`;
+                
+                // Actualizar el enlace de WhatsApp
+                updateWhatsAppLink();
+                
+                // Cargar productos relacionados
+                loadRelatedProducts(product.category, productId);
+            } else {
+                // Producto no encontrado - redirigir al catálogo
+                window.location.href = 'productos.html';
+            }
+        }
+        
+        // Función para actualizar el enlace de WhatsApp
+        function updateWhatsAppLink() {
+            const product = products.find(p => p.id === productId);
+            const quantity = parseInt(document.getElementById('quantity-input').value);
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            
+            if (product) {
+                const message = `Hola, estoy interesado en comprar ${quantity} unidad(es) del frasco "${product.name}" (${product.capacity}) por un total de ${(product.price * quantity).toLocaleString()} COP. ¿Podrías darme más información y confirmar disponibilidad?`;
+                const encodedMessage = encodeURIComponent(message);
+                whatsappBtn.href = `https://wa.me/573007572169?text=${encodedMessage}`;
+            }
+        }
+        
+        // Función para cargar productos relacionados
+        function loadRelatedProducts(category, excludeId) {
+            const relatedContainer = document.getElementById('related-products-grid');
+            relatedContainer.innerHTML = '';
+            
+            // Filtrar productos de la misma categoría, excluyendo el producto actual
+            const relatedProducts = products.filter(p => p.category === category && p.id !== excludeId);
+            
+            // Limitar a 4 productos relacionados
+            const productsToShow = relatedProducts.slice(0, 4);
+            
+            if (productsToShow.length > 0) {
+                productsToShow.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        <a href="producto.html?id=${product.id}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-name">${product.name}</h3>
+                                <div class="product-meta">
+                                    <span class="product-capacity">${product.capacity}</span>
+                                    <span class="product-price">${product.price.toLocaleString()}</span>
+                                </div>
+                                <div class="product-footer">
+                                    <button class="product-btn">
+                                        <i class="fas fa-eye"></i>
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    relatedContainer.appendChild(productCard);
+                });
+            } else {
+                // Si no hay productos relacionados, mostrar otros productos populares
+                const popularProducts = products.filter(p => p.id !== excludeId).slice(0, 4);
+                
+                popularProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        <a href="producto.html?id=${product.id}">
+                            <div class="product-img">
+                                <img src="${product.image}" alt="${product.name}">
+                            </div>
+                            <div class="product-card-info">
+                                <h3 class="product-name">${product.name}</h3>
+                                <div class="product-meta">
+                                    <span class="product-capacity">${product.capacity}</span>
+                                    <span class="product-price">${product.price.toLocaleString()}</span>
+                                </div>
+                                <div class="product-footer">
+                                    <button class="product-btn">
+                                        <i class="fas fa-eye"></i>
+                                        Ver Detalles
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    relatedContainer.appendChild(productCard);
+                });
+            }
+        }
+        
+        // Evento para el botón "Agregar al Carrito"
+        document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+            const product = products.find(p => p.id === productId);
+            const quantity = parseInt(document.getElementById('quantity-input').value);
+            
+            if (product) {
+                alert(`Se han agregado ${quantity} unidades de ${product.name} al carrito.`);
+                // Aquí se implementaría la lógica de carrito real en un proyecto completo
+                // Por ahora, solo redirigimos al WhatsApp
+                const whatsappBtn = document.getElementById('whatsapp-btn');
+                window.open(whatsappBtn.href, '_blank');
+            }
+        });
+        
+        // Cargar detalles del producto cuando la página se cargue
+        window.addEventListener('DOMContentLoaded', loadProductDetails);
+    </script>
+</body>
+</html>
