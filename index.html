@@ -1,1034 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfuvalle - Frascos para Perfumes al por Mayor | Envases para Perfumería</title>
-    <meta name="description" content="Distribuidor mayorista de frascos y envases para perfumes, lociones y colonias. Amplio catálogo de botellas de vidrio y plástico para perfumería a precios de fábrica.">
-    <meta name="keywords" content="frascos para perfumes, envases perfumería, botellas para perfumes, frascos al por mayor, envases para lociones, perfumería, Perfuvalle">
+    <meta name="description"
+        content="Distribuidor mayorista de frascos y envases para perfumes, lociones y colonias. Amplio catálogo de botellas de vidrio y plástico para perfumería a precios de fábrica.">
+    <meta name="keywords"
+        content="frascos para perfumes, envases perfumería, botellas para perfumes, frascos al por mayor, envases para lociones, perfumería, Perfuvalle">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Perfuvalle - Frascos para Perfumes al por Mayor">
-    <meta property="og:description" content="Distribuidor mayorista de frascos y envases para perfumes, lociones y colonias. Envíos a todo Colombia.">
+    <meta property="og:description"
+        content="Distribuidor mayorista de frascos y envases para perfumes, lociones y colonias. Envíos a todo Colombia.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.perfuvalle.com">
     <link rel="canonical" href="https://www.perfuvalle.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #1e8b4d;
-            --secondary-color: #4CAF50;
-            --accent-color: #8BC34A;
-            --light-color: #e8f5e9;
-            --dark-color: #1b5e20;
-            --gray-color: #f5f5f5;
-            --text-color: #333;
-            --white-color: #fff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-        }
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-color);
-            background-color: #fafafa;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            max-height: 60px;
-            margin-right: 10px;
-        }
-
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .logo-tagline {
-            font-size: 0.9rem;
-            display: block;
-            font-weight: 300;
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .main-nav ul {
-            display: flex;
-            gap: 20px;
-        }
-
-        .main-nav li {
-            position: relative;
-        }
-
-        .main-nav a {
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 8px 0;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .main-nav a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--white-color);
-            transition: var(--transition);
-        }
-
-        .main-nav a:hover:after {
-            width: 100%;
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .search-form {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-input {
-            border: none;
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-family: inherit;
-            font-size: 0.9rem;
-            width: 200px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: var(--white-color);
-            transition: var(--transition);
-        }
-
-        .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .search-input:focus {
-            outline: none;
-            background-color: rgba(255, 255, 255, 0.3);
-            width: 250px;
-        }
-
-        .search-btn {
-            background: none;
-            border: none;
-            color: var(--white-color);
-            cursor: pointer;
-            position: absolute;
-            right: 10px;
-            font-size: 1rem;
-        }
-
-        .contact-btn {
-            background-color: var(--accent-color);
-            color: var(--white-color);
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .contact-btn:hover {
-            background-color: var(--dark-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--light-color);
-            padding: 60px 0;
-            background-image: linear-gradient(to right, rgba(30, 139, 77, 0.8), rgba(139, 195, 74, 0.8)), url('../imagenes/hero-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: var(--white-color);
-        }
-
-        .hero-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            margin-bottom: 30px;
-            max-width: 700px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--dark-color);
-            border-color: var(--dark-color);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--white-color);
-            border: 2px solid var(--white-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--white-color);
-            color: var(--primary-color);
-        }
-
-        .hero-features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .feature {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            max-width: 280px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            color: var(--text-color);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .feature-text {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* Categories Section */
-        .categories {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            color: var(--primary-color);
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: 15px auto 0;
-        }
-
-        .category-tabs {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .category-tab {
-            padding: 10px 20px;
-            background-color: var(--gray-color);
-            border-radius: 30px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .category-tab.active, .category-tab:hover {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-        }
-
-        .category-content {
-            position: relative;
-        }
-
-        .category-panel {
-            display: none;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .category-panel.active {
-            display: grid;
-        }
-
-        .product-card {
-            background-color: var(--white-color);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-img {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-            background-color: #f9f9f9;
-        }
-
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.5s ease;
-        }
-
-        .product-card:hover .product-img img {
-            transform: scale(1.05);
-        }
-
-        .product-tag {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: var(--accent-color);
-            color: var(--white-color);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            height: 2.8em;
-        }
-
-        .product-meta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
-        .product-capacity {
-            color: #666;
-        }
-
-        .product-price {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .product-btn {
-            padding: 8px 15px;
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .product-btn:hover {
-            background-color: var(--dark-color);
-        }
-
-        .product-btn i {
-            font-size: 0.8rem;
-        }
-
-        .view-more {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        /* Best Sellers Section */
-        .best-sellers {
-            padding: 80px 0;
-            background-color: var(--gray-color);
-        }
-
-        .carousel {
-            position: relative;
-            margin-top: 50px;
-        }
-
-        .carousel-container {
-            overflow: hidden;
-        }
-
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-slide {
-            flex: 0 0 calc(25% - 20px);
-            padding: 0 10px;
-            box-sizing: border-box;
-        }
-
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 15px;
-        }
-
-        .carousel-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--white-color);
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .carousel-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-        }
-
-        /* About Section */
-        .about {
-            padding: 80px 0;
-        }
-
-        .about-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            position: relative;
-            box-shadow: var(--shadow);
-        }
-
-        .about-image img {
-            width: 100%;
-            display: block;
-        }
-
-        .about-content {
-            flex: 1;
-        }
-
-        .about-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .about-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 70px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        .about-text {
-            margin-bottom: 25px;
-            color: #555;
-        }
-
-        .about-stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .stat-item {
-            flex: 1;
-            min-width: 120px;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .stat-text {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 80px 0;
-            background-color: var(--light-color);
-        }
-
-        .testimonial-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .testimonial-card {
-            background-color: var(--white-color);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow);
-            max-width: 350px;
-            position: relative;
-        }
-
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: var(--light-color);
-            font-family: serif;
-            line-height: 1;
-        }
-
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-client {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .client-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .client-info h4 {
-            font-weight: 600;
-        }
-
-        .client-info p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .testimonial-rating {
-            color: gold;
-            font-size: 1.2rem;
-            margin-top: 5px;
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 80px 0;
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .cta-text {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-btn {
-            background-color: var(--white-color);
-            color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-        }
-
-        .cta-btn:hover {
-            background-color: var(--accent-color);
-            color: var(--white-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #ccc;
-            padding-top: 60px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .footer-logo {
-            margin-bottom: 20px;
-        }
-
-        .footer-logo img {
-            height: 60px;
-        }
-
-        .footer-about p {
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-link {
-            width: 36px;
-            height: 36px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background-color: var(--primary-color);
-        }
-
-        .footer-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--white-color);
-            position: relative;
-        }
-
-        .footer-title:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-
-        .footer-contact li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .footer-contact i {
-            color: var(--primary-color);
-        }
-
-        .footer-newsletter p {
-            margin-bottom: 15px;
-        }
-
-        .newsletter-form {
-            display: flex;
-        }
-
-        .newsletter-input {
-            padding: 10px 15px;
-            border: none;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white-color);
-            flex-grow: 1;
-            border-radius: 30px 0 0 30px;
-            font-family: inherit;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-        }
-
-        .newsletter-btn {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            border: none;
-            padding: 0 15px;
-            border-radius: 0 30px 30px 0;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .newsletter-btn:hover {
-            background-color: var(--accent-color);
-        }
-
-        .copyright {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        /* Media Queries */
-        @media (max-width: 1024px) {
-            .carousel-slide {
-                flex: 0 0 calc(33.33% - 20px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px 20px;
-            }
-
-            .nav-toggle {
-                display: block;
-            }
-
-            .main-nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                padding: 20px;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            .main-nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .main-nav ul {
-                flex-direction: column;
-            }
-
-            .search-form {
-                display: none;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .about-container {
-                flex-direction: column;
-            }
-
-            .about-image, .about-content {
-                flex: none;
-                width: 100%;
-            }
-
-            .carousel-slide {
-                flex: 0 0 calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .logo-text {
-                font-size: 1.5rem;
-            }
-
-            .logo-tagline {
-                display: none;
-            }
-
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .feature {
-                max-width: 100%;
-            }
-
-            .carousel-slide {
-                flex: 0 0 calc(100% - 20px);
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-        }
-
-        .whatsapp-button {
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
+
 <body>
-    <header>
+    <header class="header-loading">
         <div class="header-container container">
             <div class="logo">
                 <img src="../imagenes/logo-perfuvalle.png" alt="Perfuvalle Logo">
-
             </div>
-            
+
             <button class="nav-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-            
+
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="productos.html">Catálogo</a></li>
-                    <li><a href="#about">Nosotros</a></li>
-                    <li><a href="#testimonials">Clientes</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li class="nav-item">
+                        <a href="https://www.perfuvalle.com/" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="https://www.perfuvalle.com/#blog" class="nav-link">
+                            <i class="fas fa-blog"></i>
+                            Blog
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link has-dropdown">
+                            <i class="fas fa-spray-can"></i>
+                            Fragancias/Lociones
+                        </a>
+                        <div class="dropdown">
+                            <a href="https://lociones.perfuvalle.com/masculinas.html" class="dropdown-item">
+                                <i class="fas fa-male"></i>
+                                Hombres
+                            </a>
+                            <a href="https://lociones.perfuvalle.com/femeninas.html" class="dropdown-item">
+                                <i class="fas fa-female"></i>
+                                Mujeres
+                            </a>
+                            <a href="https://lociones.perfuvalle.com/arabess.html" class="dropdown-item">
+                                <i class="fas fa-mosque"></i>
+                                Árabes
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link has-dropdown active">
+                            <i class="fas fa-wine-bottle"></i>
+                            Frascos/Envases
+                        </a>
+                        <div class="dropdown">
+                            <a href="../index.html" class="dropdown-item">
+                                <i class="fas fa-info-circle"></i>
+                                Información
+                            </a>
+                            <a href="../productos.html" class="dropdown-item">
+                                <i class="fas fa-th-large"></i>
+                                Catálogo
+                            </a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
-            
+
             <div class="header-actions">
-                <form class="search-form">
-                    <input type="text" class="search-input" placeholder="Buscar frascos...">
-                    <button type="submit" class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-                
-                <a href="#contact" class="contact-btn">
-                    <i class="fas fa-phone-alt"></i>
+                <a href="https://wa.me/573015999848?text=Hola,%20estoy%20interesado%20en%20sus%20frascos%20para%20perfumes."
+                    class="contact-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
                     Contactar
                 </a>
             </div>
@@ -1038,8 +106,9 @@
     <section class="hero">
         <div class="hero-container container">
             <h1 class="hero-title">Frascos para Perfumes y Envases de Perfumería al por Mayor</h1>
-            <p class="hero-subtitle">Distribuidores mayoristas de botellas, frascos y envases para perfumes, lociones y colonias. Los mejores precios del mercado y envíos a todo Colombia.</p>
-            
+            <p class="hero-subtitle">Distribuidores mayoristas de botellas, frascos y envases para perfumes, lociones y
+                colonias. Los mejores precios del mercado y envíos a todo Colombia.</p>
+
             <div class="hero-buttons">
                 <a href="productos.html" class="btn btn-primary">
                     <i class="fas fa-shopping-bag"></i>
@@ -1050,20 +119,20 @@
                     Solicitar Cotización
                 </a>
             </div>
-            
+
             <div class="hero-features">
                 <div class="feature">
                     <i class="fas fa-truck feature-icon"></i>
                     <h3 class="feature-title">Envíos a Todo Colombia</h3>
                     <p class="feature-text">Despachamos a todo el país con precios especiales por volumen.</p>
                 </div>
-                
+
                 <div class="feature">
                     <i class="fas fa-tags feature-icon"></i>
                     <h3 class="feature-title">Precios Mayoristas</h3>
                     <p class="feature-text">Descuentos exclusivos para compras al por mayor y distribuidores.</p>
                 </div>
-                
+
                 <div class="feature">
                     <i class="fas fa-check-circle feature-icon"></i>
                     <h3 class="feature-title">Calidad Garantizada</h3>
@@ -1094,7 +163,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=13">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png" alt="Frasco ANI 30ml">
+                                <img src="../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png"
+                                    alt="Frasco ANI 30ml">
                                 <span class="product-tag">Nuevo</span>
                             </div>
                             <div class="product-info">
@@ -1116,7 +186,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=40">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-de-perfumeria-sultan-50-ml-perfuvalle.png" alt="Frasco SULTAN 50ml">
+                                <img src="../imagenes/frasco-de-perfumeria-sultan-50-ml-perfuvalle.png"
+                                    alt="Frasco SULTAN 50ml">
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Frasco SULTAN 50ml</h3>
@@ -1137,7 +208,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=61">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png" alt="Frasco OSO NEGRO 30ml">
+                                <img src="../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png"
+                                    alt="Frasco OSO NEGRO 30ml">
                                 <span class="product-tag">Popular</span>
                             </div>
                             <div class="product-info">
@@ -1159,7 +231,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=52">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png" alt="Frasco EROS 50ml">
+                                <img src="../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png"
+                                    alt="Frasco EROS 50ml">
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Frasco EROS 50ml</h3>
@@ -1180,7 +253,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=24">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-de-perfumeria-copa-100-ml-perfuvalle.png" alt="Frasco COPA 100ml">
+                                <img src="../imagenes/frasco-de-perfumeria-copa-100-ml-perfuvalle.png"
+                                    alt="Frasco COPA 100ml">
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Frasco COPA 100ml</h3>
@@ -1201,7 +275,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=36">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-de-perfumeria-roll-on-10-ml-perfuvalle.png" alt="Frasco ROLL ON 10ml">
+                                <img src="../imagenes/frasco-de-perfumeria-roll-on-10-ml-perfuvalle.png"
+                                    alt="Frasco ROLL ON 10ml">
                                 <span class="product-tag">Nuevo</span>
                             </div>
                             <div class="product-info">
@@ -1223,7 +298,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=35">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-de-perfumeria-robot- 30-ml-perfuvalle.png" alt="Frasco ROBOT 30ml">
+                                <img src="../imagenes/frasco-de-perfumeria-robot- 30-ml-perfuvalle.png"
+                                    alt="Frasco ROBOT 30ml">
                             </div>
                             <div class="product-info">
                                 <h3 class="product-name">Frasco ROBOT 30ml</h3>
@@ -1244,7 +320,8 @@
                     <div class="product-card">
                         <a href="../producto.html?id=79">
                             <div class="product-img">
-                                <img src="../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle.png" alt="Frasco VALENTINO LUJO 100ml">
+                                <img src="../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle.png"
+                                    alt="Frasco VALENTINO LUJO 100ml">
                                 <span class="product-tag">Popular</span>
                             </div>
                             <div class="product-info">
@@ -1263,10 +340,10 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Los otros paneles de categorías se mostrarán con JavaScript -->
             </div>
-            
+
             <div class="view-more">
                 <a href="productos.html" class="btn btn-primary">
                     <i class="fas fa-th-large"></i>
@@ -1282,7 +359,7 @@
                 <h2>Más Vendidos</h2>
                 <p class="section-subtitle">Estos son nuestros productos más populares entre distribuidores</p>
             </div>
-            
+
             <div class="carousel">
                 <div class="carousel-container">
                     <div class="carousel-track">
@@ -1290,7 +367,8 @@
                             <div class="product-card">
                                 <a href="../producto.html?id=61">
                                     <div class="product-img">
-                                        <img src="../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png" alt="Frasco OSO NEGRO 30ml">
+                                        <img src="../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png"
+                                            alt="Frasco OSO NEGRO 30ml">
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">Frasco OSO NEGRO 30ml</h3>
@@ -1302,12 +380,13 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="carousel-slide">
                             <div class="product-card">
                                 <a href="../producto.html?id=52">
                                     <div class="product-img">
-                                        <img src="../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png" alt="Frasco EROS 50ml">
+                                        <img src="../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png"
+                                            alt="Frasco EROS 50ml">
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">Frasco EROS 50ml</h3>
@@ -1319,12 +398,13 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="carousel-slide">
                             <div class="product-card">
                                 <a href="../producto.html?id=35">
                                     <div class="product-img">
-                                        <img src="../imagenes/frasco-de-perfumeria-robot- 30-ml-perfuvalle.png" alt="Frasco ROBOT 30ml">
+                                        <img src="../imagenes/frasco-de-perfumeria-robot- 30-ml-perfuvalle.png"
+                                            alt="Frasco ROBOT 30ml">
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">Frasco ROBOT 30ml</h3>
@@ -1336,12 +416,13 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="carousel-slide">
                             <div class="product-card">
                                 <a href="../producto.html?id=79">
                                     <div class="product-img">
-                                        <img src="../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle.png" alt="Frasco VALENTINO LUJO 100ml">
+                                        <img src="../imagenes/frasco-perfumeria-VALENTINO-LUJO-100ml-perfuvalle.png"
+                                            alt="Frasco VALENTINO LUJO 100ml">
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">Frasco VALENTINO LUJO 100ml</h3>
@@ -1353,12 +434,13 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="carousel-slide">
                             <div class="product-card">
                                 <a href="../producto.html?id=55">
                                     <div class="product-img">
-                                        <img src="../imagenes/frasco-perfumeria-kalifa-50ml-perfuvalle.png" alt="Frasco KALIFA 50ml">
+                                        <img src="../imagenes/frasco-perfumeria-kalifa-50ml-perfuvalle.png"
+                                            alt="Frasco KALIFA 50ml">
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">Frasco KALIFA 50ml</h3>
@@ -1370,12 +452,13 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="carousel-slide">
                             <div class="product-card">
                                 <a href="../producto.html?id=14">
                                     <div class="product-img">
-                                        <img src="../imagenes/frasco-de-perfumeria-animal-50ml-perfuvalle.png" alt="Frasco ANIMAL 50ml">
+                                        <img src="../imagenes/frasco-de-perfumeria-animal-50ml-perfuvalle.png"
+                                            alt="Frasco ANIMAL 50ml">
                                     </div>
                                     <div class="product-info">
                                         <h3 class="product-name">Frasco ANIMAL 50ml</h3>
@@ -1389,7 +472,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="carousel-nav">
                     <button class="carousel-btn carousel-prev">
                         <i class="fas fa-chevron-left"></i>
@@ -1408,30 +491,35 @@
                 <div class="about-image">
                     <img src="../imagenes/about-perfuvalle.png" alt="Perfuvalle - Nuestra Empresa">
                 </div>
-                
+
                 <div class="about-content">
                     <h2 class="about-title">Sobre Perfuvalle</h2>
-                    <p class="about-text">Somos una empresa colombiana especializada en la distribución de frascos y envases para perfumes al por mayor. Con más de 10 años de experiencia en el mercado, nos hemos consolidado como líderes en el sector, ofreciendo productos de alta calidad a precios competitivos.</p>
-                    
-                    <p class="about-text">Nuestro catálogo incluye una amplia variedad de frascos de vidrio, envases plásticos, atomizadores, accesorios y empaques para perfumería, satisfaciendo las necesidades de emprendedores, distribuidores y fabricantes de perfumes en todo el país.</p>
-                    
+                    <p class="about-text">Somos una empresa colombiana especializada en la distribución de frascos y
+                        envases para perfumes al por mayor. Con más de 10 años de experiencia en el mercado, nos hemos
+                        consolidado como líderes en el sector, ofreciendo productos de alta calidad a precios
+                        competitivos.</p>
+
+                    <p class="about-text">Nuestro catálogo incluye una amplia variedad de frascos de vidrio, envases
+                        plásticos, atomizadores, accesorios y empaques para perfumería, satisfaciendo las necesidades de
+                        emprendedores, distribuidores y fabricantes de perfumes en todo el país.</p>
+
                     <div class="about-stats">
                         <div class="stat-item">
                             <div class="stat-number">10+</div>
                             <div class="stat-text">Años de experiencia</div>
                         </div>
-                        
+
                         <div class="stat-item">
                             <div class="stat-number">100+</div>
                             <div class="stat-text">Modelos de frascos</div>
                         </div>
-                        
+
                         <div class="stat-item">
                             <div class="stat-number">5000+</div>
                             <div class="stat-text">Clientes satisfechos</div>
                         </div>
                     </div>
-                    
+
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-headset"></i>
                         Contactar Ahora
@@ -1447,18 +535,19 @@
                 <h2>Clientes Satisfechos</h2>
                 <p class="section-subtitle">Lo que nuestros clientes dicen de nosotros</p>
             </div>
-            
+
             <div class="testimonial-container">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Los frascos son de excelente calidad y los precios son muy competitivos. Llevo 3 años comprando para mi negocio de perfumes artesanales y siempre quedan encantados mis clientes.
+                        Los frascos son de excelente calidad y los precios son muy competitivos. Llevo 3 años comprando
+                        para mi negocio de perfumes artesanales y siempre quedan encantados mis clientes.
                     </div>
-                    
+
                     <div class="testimonial-client">
                         <div class="client-avatar">
-                            <img src="../imagenes/testimonial-1.jpg" alt="Cliente">
+                            <img src="../carolina.jpg" alt="Cliente">
                         </div>
-                        
+
                         <div class="client-info">
                             <h4>Carolina Ramírez</h4>
                             <p>Emprendedora</p>
@@ -1472,17 +561,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        La variedad de diseños y tamaños es increíble. Encontré exactamente lo que necesitaba para mi línea de perfumes de lujo. El servicio y la entrega también son excelentes.
+                        La variedad de diseños y tamaños es increíble. Encontré exactamente lo que necesitaba para mi
+                        línea de perfumes de lujo. El servicio y la entrega también son excelentes.
                     </div>
-                    
+
                     <div class="testimonial-client">
                         <div class="client-avatar">
-                            <img src="../imagenes/testimonial-2.jpg" alt="Cliente">
+                            <img src="../javier.jpg" alt="Cliente">
                         </div>
-                        
+
                         <div class="client-info">
                             <h4>Javier Mendoza</h4>
                             <p>Distribuidor mayorista</p>
@@ -1496,17 +586,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Los precios al por mayor han hecho que mi negocio sea mucho más rentable. Además, la atención al cliente es insuperable, siempre resuelven todas mis dudas.
+                        Los precios al por mayor han hecho que mi negocio sea mucho más rentable. Además, la atención al
+                        cliente es insuperable, siempre resuelven todas mis dudas.
                     </div>
-                    
+
                     <div class="testimonial-client">
                         <div class="client-avatar">
-                            <img src="../imagenes/testimonial-3.jpg" alt="Cliente">
+                            <img src="../maria.jpg" alt="Cliente">
                         </div>
-                        
+
                         <div class="client-info">
                             <h4>María Fernanda López</h4>
                             <p>Perfumista</p>
@@ -1527,9 +618,11 @@
     <section class="cta">
         <div class="container">
             <h2 class="cta-title">¿Listo para comenzar tu negocio de perfumes?</h2>
-            <p class="cta-text">Contamos con todo lo que necesitas para empezar: frascos, envases, accesorios y materias primas. Precios especiales para mayoristas y emprendedores.</p>
-            
-            <a href="https://wa.me/573007572169?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20frascos%20para%20perfumes%20al%20por%20mayor." class="cta-btn" target="_blank">
+            <p class="cta-text">Contamos con todo lo que necesitas para empezar: frascos, envases, accesorios y materias
+                primas. Precios especiales para mayoristas y emprendedores.</p>
+
+            <a href="https://wa.me/573015999848?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20frascos%20para%20perfumes%20al%20por%20mayor."
+                class="cta-btn" target="_blank">
                 <i class="fab fa-whatsapp"></i>
                 Contactar por WhatsApp
             </a>
@@ -1543,28 +636,26 @@
                     <div class="footer-logo">
                         <img src="../imagenes/logo-perfuvalle.png" alt="Perfuvalle Logo">
                     </div>
-                    
-                    <p>Distribuidores mayoristas de frascos y envases para perfumes. Calidad garantizada y los mejores precios del mercado.</p>
-                    
+
+                    <p>Distribuidores mayoristas de frascos y envases para perfumes. Calidad garantizada y los mejores
+                        precios del mercado.</p>
+
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="https://www.facebook.com/Perfuvalle1/" class="social-link">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://www.instagram.com/perfuvalle/" class="social-link">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://wa.me/573015999848" class="social-link">
                             <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3 class="footer-title">Enlaces Rápidos</h3>
-                    
+
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="productos.html">Catálogo</a></li>
@@ -1573,10 +664,10 @@
                         <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
                     <h3 class="footer-title">Categorías</h3>
-                    
+
                     <ul>
                         <li><a href="productos.html?categoria=30ml">Frascos 30ml</a></li>
                         <li><a href="productos.html?categoria=50ml">Frascos 50ml</a></li>
@@ -1585,22 +676,38 @@
                         <li><a href="productos.html?categoria=accesorios">Accesorios</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-contact">
                     <h3 class="footer-title">Contacto</h3>
-                    
+
                     <ul>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Cali, Valle del Cauca, Colombia</span>
+                            <span>MARROQUIN SECTOR COMERCIAL LOS MANGOS, Cali, Valle del Cauca, Colombia</span>
+                        </li>
+                                                <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Carrera  26 M # 96-59</span>
+                        </li>
+                                                                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Carrera  26  M1  # 73B - 18</span>
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+57 300 757 2169</span>
+                            <span>+57 3015999848</span>
+                        </li>
+                                                <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+57 3188894005</span>
+                        </li>
+                                                <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+57 3011953875</span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>info@perfuvalle.com</span>
+                            <span>perfuvallecali@hotmail.com</span>
                         </li>
                         <li>
                             <i class="fas fa-clock"></i>
@@ -1608,21 +715,9 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="footer-newsletter">
-                    <h3 class="footer-title">Suscríbete</h3>
-                    
-                    <p>Recibe nuestras promociones y novedades</p>
-                    
-                    <form class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Tu correo electrónico">
-                        <button type="submit" class="newsletter-btn">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+
             </div>
-            
+
             <div class="copyright">
                 &copy; 2025 Perfuvalle - Todos los derechos reservados
             </div>
@@ -1630,7 +725,8 @@
     </footer>
 
     <div class="whatsapp-float">
-        <a href="https://wa.me/573007572169?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20frascos%20para%20perfumes%20al%20por%20mayor." class="whatsapp-button" target="_blank">
+        <a href="https://wa.me/573015999848?text=Hola,%20estoy%20interesado%20en%20información%20sobre%20frascos%20para%20perfumes%20al%20por%20mayor."
+            class="whatsapp-button" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -1639,64 +735,180 @@
         // Mobile Navigation Toggle
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
-        
+
         navToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
+
+            // Cambiar icono del botón
+            const icon = navToggle.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
-        
+
+        // Mobile Dropdown Toggle
+        const navLinksWithDropdown = document.querySelectorAll('.nav-link.has-dropdown');
+
+        navLinksWithDropdown.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Solo en móvil
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const navItem = link.closest('.nav-item');
+                    const isActive = navItem.classList.contains('mobile-active');
+
+                    // Cerrar todos los otros dropdowns móviles
+                    document.querySelectorAll('.nav-item.mobile-active').forEach(item => {
+                        if (item !== navItem) {
+                            item.classList.remove('mobile-active');
+                        }
+                    });
+
+                    // Toggle el dropdown actual
+                    navItem.classList.toggle('mobile-active');
+                }
+            });
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        const allNavLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Si no es un dropdown parent en móvil, cerrar el menú
+                if (!link.classList.contains('has-dropdown') || window.innerWidth > 768) {
+                    mainNav.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+
+                    // También cerrar dropdowns móviles
+                    document.querySelectorAll('.nav-item.mobile-active').forEach(item => {
+                        item.classList.remove('mobile-active');
+                    });
+                }
+            });
+        });
+
+        // Cerrar dropdowns al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-item')) {
+                document.querySelectorAll('.nav-item.mobile-active').forEach(item => {
+                    item.classList.remove('mobile-active');
+                });
+            }
+        });
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        // Resize handler para limpiar estados móviles
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                mainNav.classList.remove('active');
+                document.querySelectorAll('.nav-item.mobile-active').forEach(item => {
+                    item.classList.remove('mobile-active');
+                });
+
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Función para actualizar el estado activo del menú según la página actual
+        function updateActiveNavigation() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+
+                // Lógica para determinar qué enlace debe estar activo
+                const href = link.getAttribute('href');
+                if (href === currentPath ||
+                    (currentPath.includes('/fragancias/') && link.textContent.includes('Fragancias')) ||
+                    (currentPath.includes('/frascos/') && link.textContent.includes('Frascos')) ||
+                    (currentPath.includes('/blog') && link.textContent.includes('Blog'))) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Actualizar navegación activa al cargar la página
+        document.addEventListener('DOMContentLoaded', updateActiveNavigation);
+
         // Category Tabs
         const categoryTabs = document.querySelectorAll('.category-tab');
-        
+
         categoryTabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 // Remove active class from all tabs
                 categoryTabs.forEach(t => t.classList.remove('active'));
-                
+
                 // Add active class to clicked tab
                 tab.classList.add('active');
-                
+
                 // Get category
                 const category = tab.getAttribute('data-category');
-                
+
                 // Show corresponding panel
                 showCategoryPanel(category);
             });
         });
-        
+
         function showCategoryPanel(category) {
             // In a real implementation, this would show different products based on category
             // For now, we're just showing the "all" panel
-            
+
             // In a full implementation, you'd filter products here or load them via AJAX
             console.log(`Show category: ${category}`);
         }
-        
+
         // Best Sellers Carousel
         const carouselTrack = document.querySelector('.carousel-track');
         const carouselSlides = document.querySelectorAll('.carousel-slide');
         const prevButton = document.querySelector('.carousel-prev');
         const nextButton = document.querySelector('.carousel-next');
-        
+
         let slideWidth = carouselSlides[0].offsetWidth;
         let currentIndex = 0;
         const slidesToShow = getSlideToShow();
         const totalSlides = carouselSlides.length;
-        
+
         function getSlideToShow() {
             if (window.innerWidth < 576) return 1;
             if (window.innerWidth < 768) return 2;
             if (window.innerWidth < 1024) return 3;
             return 4;
         }
-        
+
         function updateCarousel() {
             slideWidth = carouselSlides[0].offsetWidth;
             carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         }
-        
+
         // Initial setup
         updateCarousel();
-        
+
         // Carousel navigation
         prevButton.addEventListener('click', () => {
             if (currentIndex > 0) {
@@ -1704,38 +916,38 @@
                 updateCarousel();
             }
         });
-        
+
         nextButton.addEventListener('click', () => {
             if (currentIndex < totalSlides - slidesToShow) {
                 currentIndex++;
                 updateCarousel();
             }
         });
-        
+
         // Handle window resize
         window.addEventListener('resize', () => {
             updateCarousel();
         });
-        
+
         // Product card click
         const productCards = document.querySelectorAll('.product-card');
-        
+
         productCards.forEach(card => {
             card.addEventListener('click', (e) => {
                 const link = card.querySelector('a').getAttribute('href');
                 window.location.href = link;
             });
         });
-        
+
         // Initialize product data
         const productData = [
             // Este array contendría todos los datos de productos
             // Cada producto tendría: id, nombre, descripción, capacidad, precio, imagen, etc.
-            {id: 13, name: "Frasco ANI 30ml", capacity: "30 ml", price: 2300, image: "../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png", category: "30ml"},
-            {id: 40, name: "Frasco SULTAN 50ml", capacity: "50 ml", price: 5000, image: "../imagenes/frasco-de-perfumeria-sultan-50-ml-perfuvalle.png", category: "50ml"},
-            {id: 61, name: "Frasco OSO NEGRO 30ml", capacity: "30 ml", price: 6500, image: "../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png", category: "30ml"},
-            {id: 52, name: "Frasco EROS 50ml", capacity: "50 ml", price: 5000, image: "../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png", category: "50ml"},
-            {id: 24, name: "Frasco COPA 100ml", capacity: "100 ml", price: 5800, image: "../imagenes/frasco-de-perfumeria-copa-100-ml-perfuvalle.png", category: "100ml"},
+            { id: 13, name: "Frasco ANI 30ml", capacity: "30 ml", price: 2300, image: "../imagenes/frasco-de-perfumeria-ani-30-ml-perfuvalle.png", category: "30ml" },
+            { id: 40, name: "Frasco SULTAN 50ml", capacity: "50 ml", price: 5000, image: "../imagenes/frasco-de-perfumeria-sultan-50-ml-perfuvalle.png", category: "50ml" },
+            { id: 61, name: "Frasco OSO NEGRO 30ml", capacity: "30 ml", price: 6500, image: "../imagenes/frasco-perfumeria-oso-negro-30ml-perfuvalle.png", category: "30ml" },
+            { id: 52, name: "Frasco EROS 50ml", capacity: "50 ml", price: 5000, image: "../imagenes/frasco-perfumeria-eros-50ml-perfuvalle.png", category: "50ml" },
+            { id: 24, name: "Frasco COPA 100ml", capacity: "100 ml", price: 5800, image: "../imagenes/frasco-de-perfumeria-copa-100-ml-perfuvalle.png", category: "100ml" },
             // Se agregarían todos los productos aquí
         ];
 
@@ -1764,6 +976,33 @@
                 </div>
             `;
         }
+
+        // Efecto de hover mejorado para los dropdowns
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            const dropdown = item.querySelector('.dropdown');
+            if (dropdown) {
+                let hoverTimer;
+
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(hoverTimer);
+                    if (window.innerWidth > 768) {
+                        dropdown.style.display = 'block';
+                    }
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    if (window.innerWidth > 768) {
+                        hoverTimer = setTimeout(() => {
+                            dropdown.style.display = '';
+                        }, 100);
+                    }
+                });
+            }
+        });
+
+        console.log('✅ Perfuvalle - Frascos para Perfumes al por Mayor cargado correctamente!');
     </script>
 </body>
+
 </html>
